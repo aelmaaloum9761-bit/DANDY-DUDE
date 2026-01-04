@@ -1,0 +1,10 @@
+.checkout-page {
+  padding: 40px 0;
+}
+
+.checkout-page h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}

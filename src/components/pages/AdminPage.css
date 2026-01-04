@@ -1,0 +1,326 @@
+.admin-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 200px);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.btn-refresh {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-refresh:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  padding: 30px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  color: #721c24;
+}
+
+.error-message code {
+  background-color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+.admin-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+}
+
+.inquiries-list h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.inquiries-table {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.inquiries-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inquiries-table thead {
+  background-color: #f8f9fa;
+}
+
+.inquiries-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.inquiries-table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.inquiries-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.inquiries-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.inquiries-table tbody tr.selected {
+  background-color: #e7f3ff;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-view {
+  padding: 6px 12px;
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-view:hover {
+  background-color: #138496;
+}
+
+.inquiry-details {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 20px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.details-header h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-close:hover {
+  color: #333;
+}
+
+.details-section {
+  margin-bottom: 25px;
+}
+
+.details-section h3 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.info-grid div {
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.info-grid strong {
+  color: #333;
+  margin-right: 8px;
+}
+
+.info-grid a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info-grid a:hover {
+  text-decoration: underline;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-card {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.item-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-card h4 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.item-card p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.status-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.btn-status {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  transition: opacity 0.2s;
+}
+
+.btn-status:hover {
+  opacity: 0.85;
+}
+
+.btn-status.pending {
+  background-color: #ffc107;
+}
+
+.btn-status.contacted {
+  background-color: #17a2b8;
+}
+
+.btn-status.completed {
+  background-color: #28a745;
+}
+
+.btn-status.cancelled {
+  background-color: #dc3545;
+}
+
+.btn-delete {
+  width: 100%;
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.no-inquiries {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+@media (max-width: 1200px) {
+  .admin-content {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiry-details {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .inquiries-table {
+    font-size: 14px;
+  }
+
+  .inquiries-table th,
+  .inquiries-table td {
+    padding: 8px;
+  }
+
+  .status-buttons {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,8 @@
+/* 
+  This is a wrapper page. Most of the styling for the product
+  display is handled in src/components/products/ProductDetail.css.
+  This file can be used for page-specific styles if needed in the future.
+*/
+.product-page {
+  /* You can add page-specific styles here if needed */
+}

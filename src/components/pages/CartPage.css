@@ -1,0 +1,68 @@
+.cart-page {
+  padding: 40px 0;
+}
+
+.cart-page h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.cart-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Main content is 2x wider than the summary */
+  gap: 40px;
+}
+
+/* --- Empty Cart State --- */
+.cart-page-empty {
+  padding: 80px 0;
+}
+
+.cart-page-empty h1 {
+  margin-bottom: 40px;
+}
+
+.empty-cart-message {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.empty-cart-message i {
+  font-size: 4rem;
+  color: var(--medium-gray);
+  margin-bottom: 20px;
+}
+
+.empty-cart-message h2 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.empty-cart-message p {
+  color: var(--dark-gray);
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .cart-content {
+    grid-template-columns: 1fr; /* Stack into a single column */
+  }
+}

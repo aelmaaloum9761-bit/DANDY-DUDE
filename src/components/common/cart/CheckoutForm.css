@@ -1,0 +1,218 @@
+/* Main container for the entire checkout form */
+.checkout-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Step Indicators --- */
+.step-indicators {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--medium-gray);
+  color: var(--secondary-color);
+  font-weight: 600;
+  position: relative;
+}
+
+/* Creates the line between step indicators */
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: var(--medium-gray);
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+/* Styles for the active step */
+.step.active {
+  background-color: var(--primary-color);
+}
+
+/* Styles for the line after an active step */
+.step.active:not(:last-child)::after {
+  background-color: var(--primary-color);
+}
+
+/* --- Form Content --- */
+.checkout-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: var(--dark-gray);
+  font-style: italic;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* --- Order Summary Section --- */
+.order-summary-checkout {
+  background-color: var(--light-gray);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.summary-item,
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-line.total {
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-top: 1px solid var(--medium-gray);
+  padding-top: 10px;
+}
+
+/* --- Payment Information Box --- */
+.payment-info-box {
+  background-color: #fffbe6; /* A light yellow background */
+  border: 1px solid #ffe58f;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.payment-info-box h3 {
+  margin-top: 0;
+  color: #d46b08; /* A dark orange/yellow color */
+}
+
+/* --- Form Navigation Buttons --- */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.place-order-btn {
+  width: 100%;
+}
+
+/* --- Order Confirmation --- */
+.order-confirmation {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.order-confirmation h2 {
+  color: var(--success-color);
+  margin-bottom: 20px;
+}
+
+.continue-shopping-btn {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #333;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .checkout-form {
+    padding: 20px;
+  }
+  
+  .step:not(:last-child)::after {
+    width: 50px; /* Shorter line on mobile */
+  }
+}

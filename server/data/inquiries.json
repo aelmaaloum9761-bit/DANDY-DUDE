@@ -1,0 +1,27 @@
+[
+  {
+    "id": "INQ-1767480369156",
+    "customerInfo": {
+      "fullName": "Aurea TraVel",
+      "address": "a.elmaaloum9761@uca.ac.ma",
+      "city": "Marrakesh",
+      "postalCode": "14500",
+      "email": "a.elmaaloum9761@uca.ac.ma",
+      "phoneNumber": "0774510667"
+    },
+    "orderItems": [
+      {
+        "id": "ww1",
+        "name": "Elegant Gold Watch",
+        "price": 269,
+        "image": "/images/women1.png",
+        "isNew": true,
+        "category": "womens-watches",
+        "style": "dress",
+        "color": "gold"
+      }
+    ],
+    "status": "contacted",
+    "createdAt": "2026-01-03T22:46:09.156Z"
+  }
+]

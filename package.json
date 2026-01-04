@@ -1,0 +1,46 @@
+{
+  "name": "dandy-dudes",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://aelmaalouim9761-bit.github.io/DANDY-DUDE",
+  "description": "Official e-commerce website for DANDY DUDES, selling watches, wallets, and glasses.",
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "set HOST=0.0.0.0&&react-scripts start",
+    "build": "react-scripts build",
+    "build:no-eslint": "cross-env DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

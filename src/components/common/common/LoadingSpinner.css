@@ -1,0 +1,84 @@
+/* Base container for the spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Full-page overlay variant */
+/* This class is added when the 'overlay' prop is true */
+.loading-spinner--overlay {
+  position: fixed; /* Fixed positioning to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  z-index: 9999; /* Ensure it's on top of all other content */
+  color: var(--secondary-color); /* White text for better contrast */
+}
+
+/* The spinning element itself */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Light grey track */
+  border-radius: 50%;
+  border-top: 4px solid var(--accent-color); /* Gold spinning part */
+  animation: spin 1s linear infinite; /* Apply the spinning animation */
+}
+
+/* Size variations for the spinner */
+/* These classes are added based on the 'size' prop */
+.spinner--small {
+  width: 20px;
+  height: 20px;
+  border-width: 2px; /* Thinner border for smaller spinner */
+  border-top-width: 2px;
+}
+
+.spinner--medium {
+  width: 40px;
+  height: 40px;
+  border-width: 4px; /* Default border width */
+  border-top-width: 4px;
+}
+
+.spinner--large {
+  width: 60px;
+  height: 60px;
+  border-width: 6px; /* Thicker border for larger spinner */
+  border-top-width: 6px;
+}
+
+/* Text displayed with the spinner */
+.loading-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* For the overlay variant, make sure the text is white */
+.loading-spinner--overlay .loading-text {
+  color: var(--secondary-color);
+}
+
+/* The keyframe animation for the spinning effect */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Screen reader only text */
+/* This class is used for accessibility, providing context for users of screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,0 +1,71 @@
+/* The main section that wraps the grid and the title */
+.product-section {
+  padding: 60px 0; /* Adds vertical spacing around the section */
+}
+
+/* The title displayed above the product grid */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* The actual grid container for the product cards */
+.product-grid {
+  display: grid;
+  /* 
+    This is the core of the responsive grid layout:
+    - auto-fill: Automatically creates as many columns as can fit in the available space.
+    - minmax(280px, 1fr): Each column will be at least 280px wide, but will 
+      grow to take up equal fractions (1fr) of the available space.
+  */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px; /* The space between grid items (rows and columns) */
+}
+
+/* Styling for the message when no products are found */
+.no-products-found {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--dark-gray);
+}
+
+.no-products-found h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  /* Reduce padding on tablets */
+  .product-section {
+    padding: 40px 0;
+  }
+
+  /* Make the title slightly smaller */
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+
+  /* Adjust the grid for smaller screens */
+  .product-grid {
+    /* Allow columns to be a bit smaller, creating more columns if space allows */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px; /* Reduce the gap between items */
+  }
+}
+
+/* Responsive Design for very small screens (mobile phones) */
+@media (max-width: 480px) {
+  /* On very small screens, a single column is often best for usability */
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

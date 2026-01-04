@@ -1,0 +1,129 @@
+/* Main container for the cart summary box */
+.cart-summary {
+  background-color: var(--light-gray);
+  padding: 25px;
+  border-radius: 8px;
+  height: fit-content; /* Ensures it only takes up the space it needs */
+}
+
+/* Title for the summary section */
+.cart-summary h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* A single line in the summary (e.g., Subtotal, Tax) */
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Styling for the final total line */
+.summary-line.total {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+
+/* Styling for a discount line if a promo code is applied */
+.summary-line.discount {
+  color: var(--success-color);
+}
+
+/* Styling for the "FREE" shipping text */
+.free-shipping {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+/* A visual divider line above the total */
+.summary-divider {
+  height: 1px;
+  background-color: var(--medium-gray);
+  margin: 20px 0;
+}
+
+/* --- Promo Code Form --- */
+.promo-code-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.promo-code-form input {
+  flex: 1; /* Input takes up available space */
+  padding: 12px;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.promo-code-form button {
+  padding: 0 20px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-code-form button:hover {
+  background-color: #333;
+}
+
+/* Error message for an invalid promo code */
+.promo-error {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+/* --- Checkout Button --- */
+.checkout-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline from Link */
+}
+
+.checkout-button:hover {
+  background-color: #333;
+}
+
+/* --- Continue Shopping Link --- */
+.continue-shopping-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.continue-shopping-link:hover {
+  color: var(--primary-color);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  /* Add some top margin on mobile when it's below the cart items */
+  .cart-summary {
+    margin-top: 20px;
+  }
+}

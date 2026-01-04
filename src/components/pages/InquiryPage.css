@@ -1,0 +1,66 @@
+.inquiry-page {
+  padding: 40px 0;
+}
+
+.inquiry-page h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.inquiry-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.inquiry-page-empty {
+  padding: 80px 0;
+}
+
+.inquiry-page-empty h1 {
+  margin-bottom: 40px;
+}
+
+.empty-inquiry-message {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.empty-inquiry-message i {
+  font-size: 4rem;
+  color: var(--medium-gray);
+  margin-bottom: 20px;
+}
+
+.empty-inquiry-message h2 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.empty-inquiry-message p {
+  color: var(--dark-gray);
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+@media (max-width: 992px) {
+  .inquiry-content {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,136 @@
+/* Main container for a single item in the shopping cart */
+.cart-item {
+  display: grid;
+  /* 
+    Define columns for each piece of information:
+    1. Image (100px)
+    2. Details (takes up 2 parts of the remaining space)
+    3. Price (1 part)
+    4. Quantity (1 part)
+    5. Total (1 part)
+    6. Remove button (fixed 40px)
+  */
+  grid-template-columns: 100px 2fr 1fr 1fr 1fr 40px;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+/* --- Item Image --- */
+.item-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px;
+  border: 1px solid var(--medium-gray);
+}
+
+/* --- Item Details --- */
+.item-details .item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.item-details .item-options {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* --- Price and Total --- */
+.item-price,
+.item-total {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --- Quantity Selector --- */
+.item-quantity .quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+  width: fit-content;
+}
+
+.item-quantity .quantity-selector button {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.item-quantity .quantity-selector button:hover {
+    background-color: var(--light-gray);
+}
+
+.item-quantity .quantity-selector input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid var(--medium-gray);
+  border-right: 1px solid var(--medium-gray);
+  padding: 8px 5px;
+  font-size: 1rem;
+}
+
+/* --- Remove Button --- */
+.item-remove {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--dark-gray);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.item-remove:hover {
+  color: var(--error-color); /* Turns red on hover to indicate danger */
+}
+
+/* --- Responsive Design --- */
+
+/* For tablets and smaller */
+@media (max-width: 992px) {
+  .cart-item {
+    grid-template-columns: 80px 1fr 1fr 40px; /* Reduce to 4 columns */
+  }
+  .item-price, .item-quantity {
+    display: none; /* Hide price and quantity columns */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 70px 1fr 30px; /* Reduce to 3 columns */
+    gap: 15px;
+  }
+  .item-total {
+    display: none; /* Hide total price column */
+  }
+  /* You could show quantity and total as text inside details if needed */
+}
+
+/* For very small mobile phones */
+@media (max-width: 480px) {
+  .cart-item {
+    grid-template-columns: 60px 1fr 30px; /* Adjust column sizes */
+    gap: 10px;
+  }
+  .item-image img {
+    width: 60px;
+    height: 60px;
+  }
+  .item-details .item-name {
+    font-size: 1rem;
+  }
+  .item-remove {
+    font-size: 1.5rem;
+  }
+}
