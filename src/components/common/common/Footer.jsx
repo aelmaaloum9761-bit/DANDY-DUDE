@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section brand">
             <Link to="/" className="footer-logo">
-              <img src="/images/logo.png" alt="DANDY DUDES Logo" />
+              <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="DANDY DUDES Logo" />
               <span className="footer-brand-text">DANDY DUDES</span>
             </Link>
             <p>Elegant accessories for the modern gentleman and lady. Quality, style, and sophistication.</p>

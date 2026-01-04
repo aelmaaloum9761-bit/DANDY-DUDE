@@ -36,7 +36,7 @@ const Header = () => {
         <div className="header-content">
           {/* Logo */}
           <Link to="/" className="logo">
-            <img src="/images/logo.png" alt="DANDY DUDES Logo" />
+            <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="DANDY DUDES Logo" />
             <span className="logo-text">DANDY DUDES</span>
           </Link>
 
