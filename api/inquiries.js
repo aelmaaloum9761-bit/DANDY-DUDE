@@ -1,6 +1,27 @@
-// Simple in-memory storage (data will be lost on redeployment)
-// For production, use a real database like MongoDB, PostgreSQL, etc.
-let inquiries = [];
+const { MongoClient } = require('mongodb');
+
+let cachedClient = null;
+let cachedDb = null;
+
+async function connectToDatabase() {
+  if (cachedClient && cachedDb) {
+    return { client: cachedClient, db: cachedDb };
+  }
+
+  const uri = process.env.MONGODB_URI || 'mongodb+srv://dandydudes:dandydudes2026@cluster0.mongodb.net/dandydudes?retryWrites=true&w=majority';
+  
+  const client = await MongoClient.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  const db = client.db('dandydudes');
+  
+  cachedClient = client;
+  cachedDb = db;
+
+  return { client, db };
+}
 
 module.exports = async function handler(req, res) {
   // Enable CORS
@@ -19,53 +40,61 @@ module.exports = async function handler(req, res) {
 
   const { method } = req;
   const pathParts = req.url.split('/');
-  const id = pathParts[pathParts.length - 1] !== 'inquiries' ? pathParts[pathParts.length - 1] : null;
-
-  console.log('API Request:', method, req.url, 'ID:', id);
-  console.log('Current inquiries count:', inquiries.length);
+  const id = pathParts[pathParts.length - 1] !== 'inquiries' ? decodeURIComponent(pathParts[pathParts.length - 1]) : null;
 
   try {
+    const { db } = await connectToDatabase();
+    const collection = db.collection('inquiries');
+
     switch (method) {
       case 'GET':
-        if (id) {
+        if (id && id !== 'inquiries') {
           // Get single inquiry
-          const inquiry = inquiries.find(i => i.id === id);
+          const inquiry = await collection.findOne({ id: id });
           if (!inquiry) {
             return res.status(404).json({ error: 'Inquiry not found' });
           }
           return res.status(200).json(inquiry);
         } else {
           // Get all inquiries
+          const inquiries = await collection.find({}).sort({ createdAt: -1 }).toArray();
           return res.status(200).json(inquiries);
         }
 
       case 'POST':
         // Create new inquiry
-        console.log('Creating inquiry with body:', req.body);
         const newInquiry = {
           id: `INQ-${Date.now()}`,
           ...req.body,
           createdAt: new Date().toISOString(),
           status: req.body.status || 'pending'
         };
-        inquiries.push(newInquiry);
-        console.log('Inquiry created:', newInquiry.id, 'Total inquiries:', inquiries.length);
+        await collection.insertOne(newInquiry);
+        console.log('Inquiry created:', newInquiry.id);
         return res.status(201).json(newInquiry);
 
       case 'PATCH':
         // Update inquiry
-        const updateIndex = inquiries.findIndex(i => i.id === id);
-        if (updateIndex === -1) {
+        if (!id || id === 'inquiries') {
+          return res.status(400).json({ error: 'ID is required' });
+        }
+        const updateResult = await collection.findOneAndUpdate(
+          { id: id },
+          { $set: req.body },
+          { returnDocument: 'after' }
+        );
+        if (!updateResult.value) {
           return res.status(404).json({ error: 'Inquiry not found' });
         }
-        inquiries[updateIndex] = { ...inquiries[updateIndex], ...req.body };
-        return res.status(200).json(inquiries[updateIndex]);
+        return res.status(200).json(updateResult.value);
 
       case 'DELETE':
         // Delete inquiry
-        const initialLength = inquiries.length;
-        inquiries = inquiries.filter(i => i.id !== id);
-        if (inquiries.length === initialLength) {
+        if (!id || id === 'inquiries') {
+          return res.status(400).json({ error: 'ID is required' });
+        }
+        const deleteResult = await collection.deleteOne({ id: id });
+        if (deleteResult.deletedCount === 0) {
           return res.status(404).json({ error: 'Inquiry not found' });
         }
         return res.status(200).json({ message: 'Inquiry deleted successfully' });
@@ -76,6 +105,6 @@ module.exports = async function handler(req, res) {
     }
   } catch (error) {
     console.error('API Error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    return res.status(500).json({ error: 'Internal server error', message: error.message });
   }
 }
