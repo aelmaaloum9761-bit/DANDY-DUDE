@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../common/contexts/AuthContext';
 import Dashboard from '../common/account/Dashboard';
 // You will create these components later
@@ -8,13 +8,19 @@ import Dashboard from '../common/account/Dashboard';
 import './AccountPage.css';
 
 const AccountPage = () => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, logout } = useAuth();
+  const location = useLocation();
 
   // 1. Protect the entire account section
   // If the user is not logged in, redirect them to the login page.
   if (!isAuthenticated) {
     return <Navigate to="/login" />;
   }
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout();
+  };
 
   return (
     <div className="account-page">
@@ -26,12 +32,12 @@ const AccountPage = () => {
             <h2>My Account</h2>
             <nav>
               <ul>
-                <li><a href="/account" className="active">Dashboard</a></li>
-                <li><a href="/account/orders">Orders</a></li>
-                <li><a href="/account/addresses">Addresses</a></li>
-                <li><a href="/account/wishlist">Wishlist</a></li>
-                <li><a href="/account/details">Account Details</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li><Link to="/account" className={location.pathname === '/account' ? 'active' : ''}>Dashboard</Link></li>
+                <li><Link to="/account/orders" className={location.pathname === '/account/orders' ? 'active' : ''}>Orders</Link></li>
+                <li><Link to="/account/addresses" className={location.pathname === '/account/addresses' ? 'active' : ''}>Addresses</Link></li>
+                <li><Link to="/account/wishlist" className={location.pathname === '/account/wishlist' ? 'active' : ''}>Wishlist</Link></li>
+                <li><Link to="/account/details" className={location.pathname === '/account/details' ? 'active' : ''}>Account Details</Link></li>
+                <li><a href="#" onClick={handleLogout}>Logout</a></li>
               </ul>
             </nav>
           </aside>

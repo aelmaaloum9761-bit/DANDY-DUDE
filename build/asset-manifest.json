@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.2d87fce3.css",
-    "main.js": "/static/js/main.1d2a4723.js",
+    "main.js": "/static/js/main.1e1f9350.js",
     "index.html": "/index.html",
     "static/media/category-womens-watches.svg": "/static/media/category-womens-watches.324c3677fdcea0903830.svg",
     "static/media/category-mens-watches.svg": "/static/media/category-mens-watches.9c3cb9be19f2d9207d71.svg",
     "static/media/category-glasses.svg": "/static/media/category-glasses.8e348db962bc0c6c389e.svg",
     "static/media/category-wallets.svg": "/static/media/category-wallets.2ff10430bd38c3e65aa2.svg",
     "main.2d87fce3.css.map": "/static/css/main.2d87fce3.css.map",
-    "main.1d2a4723.js.map": "/static/js/main.1d2a4723.js.map"
+    "main.1e1f9350.js.map": "/static/js/main.1e1f9350.js.map"
   },
   "entrypoints": [
     "static/css/main.2d87fce3.css",
-    "static/js/main.1d2a4723.js"
+    "static/js/main.1e1f9350.js"
   ]
 }
