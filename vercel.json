@@ -4,11 +4,11 @@
   "outputDirectory": "build",
   "rewrites": [
     {
-      "source": "/api/inquiries",
-      "destination": "/api/inquiries"
+      "source": "/api/inquiries/:id",
+      "destination": "/api/inquiries?id=:id"
     },
     {
-      "source": "/api/inquiries/:id",
+      "source": "/api/inquiries",
       "destination": "/api/inquiries"
     }
   ]

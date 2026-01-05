@@ -17,8 +17,20 @@ module.exports = async function handler(req, res) {
   }
 
   const { method } = req;
-  const pathParts = req.url.split('/');
-  const id = pathParts[pathParts.length - 1] !== 'inquiries' ? decodeURIComponent(pathParts[pathParts.length - 1]) : null;
+  
+  // Extract ID from URL - handle both /api/inquiries/ID and query params
+  let id = null;
+  if (req.url.includes('?')) {
+    const urlParams = new URLSearchParams(req.url.split('?')[1]);
+    id = urlParams.get('id');
+  } else {
+    const pathParts = req.url.split('/').filter(p => p);
+    if (pathParts.length > 2 && pathParts[pathParts.length - 1] !== 'inquiries') {
+      id = decodeURIComponent(pathParts[pathParts.length - 1]);
+    }
+  }
+
+  console.log('API:', method, 'URL:', req.url, 'ID:', id);
 
   try {
     switch (method) {
