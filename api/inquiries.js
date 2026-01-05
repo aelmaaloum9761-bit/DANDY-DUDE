@@ -18,7 +18,11 @@ module.exports = async function handler(req, res) {
   }
 
   const { method } = req;
-  const id = req.query.id;
+  const pathParts = req.url.split('/');
+  const id = pathParts[pathParts.length - 1] !== 'inquiries' ? pathParts[pathParts.length - 1] : null;
+
+  console.log('API Request:', method, req.url, 'ID:', id);
+  console.log('Current inquiries count:', inquiries.length);
 
   try {
     switch (method) {
@@ -37,6 +41,7 @@ module.exports = async function handler(req, res) {
 
       case 'POST':
         // Create new inquiry
+        console.log('Creating inquiry with body:', req.body);
         const newInquiry = {
           id: `INQ-${Date.now()}`,
           ...req.body,
@@ -44,6 +49,7 @@ module.exports = async function handler(req, res) {
           status: req.body.status || 'pending'
         };
         inquiries.push(newInquiry);
+        console.log('Inquiry created:', newInquiry.id, 'Total inquiries:', inquiries.length);
         return res.status(201).json(newInquiry);
 
       case 'PATCH':
