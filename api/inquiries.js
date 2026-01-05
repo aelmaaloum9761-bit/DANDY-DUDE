@@ -2,7 +2,7 @@
 // For production, use a real database like MongoDB, PostgreSQL, etc.
 let inquiries = [];
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');

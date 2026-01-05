@@ -4,26 +4,12 @@
   "outputDirectory": "build",
   "rewrites": [
     {
-      "source": "/api/inquiries/:id",
-      "destination": "/api/inquiries?id=:id"
-    },
-    {
       "source": "/api/inquiries",
       "destination": "/api/inquiries"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
     },
     {
-      "src": "/images/(.*)",
-      "dest": "/images/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/api/inquiries/:id",
+      "destination": "/api/inquiries"
     }
   ]
 }
