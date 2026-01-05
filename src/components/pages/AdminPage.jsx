@@ -14,7 +14,7 @@ const AdminPage = () => {
   const fetchInquiries = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/inquiries');
+      const response = await fetch('/api/inquiries');
       if (!response.ok) throw new Error('Failed to fetch inquiries');
       const data = await response.json();
       setInquiries(data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)));
@@ -29,7 +29,7 @@ const AdminPage = () => {
 
   const updateInquiryStatus = async (id, status) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/inquiries/${id}`, {
+      const response = await fetch(`/api/inquiries/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status })
@@ -46,7 +46,7 @@ const AdminPage = () => {
     if (!window.confirm('Are you sure you want to delete this inquiry?')) return;
     
     try {
-      const response = await fetch(`http://localhost:5000/api/inquiries/${id}`, {
+      const response = await fetch(`/api/inquiries/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) throw new Error('Failed to delete inquiry');
