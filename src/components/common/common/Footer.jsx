@@ -57,15 +57,6 @@ const Footer = () => {
               <li><Link to="/terms">Terms of Service</Link></li>
             </ul>
           </div>
-
-          <div className="footer-section newsletter">
-            <h3>Stay in Style</h3>
-            <p>Subscribe to our newsletter for exclusive offers and new product updates.</p>
-            <form className="newsletter-form">
-              <input type="email" placeholder="Your email address" required />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
         </div>
 
         <div className="footer-bottom">

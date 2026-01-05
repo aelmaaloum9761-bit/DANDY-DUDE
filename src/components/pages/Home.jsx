@@ -101,18 +101,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* 5. Newsletter Signup */}
-      <section className="newsletter">
-        <div className="container">
-          <h2>Stay in Style</h2>
-          <p>Subscribe to our newsletter for exclusive offers and new product updates.</p>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-      </section>
     </div>
   );
 };
