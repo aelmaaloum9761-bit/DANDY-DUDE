@@ -14,7 +14,7 @@ const Home = () => {
         // In a real app, this would be an actual API call
         const mockProducts = [
           { id: 'ww1', name: "Elegant Gold Watch", price: 220, image: `${process.env.PUBLIC_URL}/images/women1.png`, isNew: true, category: 'womens-watches' },
-          { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 220, image: `${process.env.PUBLIC_URL}/images/women2.png`, isNew: true, category: 'womens-watches' },
+          { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 220, image: `${process.env.PUBLIC_URL}/images/women2.jpeg`, isNew: true, category: 'womens-watches' },
           { id: 'ww3', name: "Pink Dial Lady Watch", price: 220, image: `${process.env.PUBLIC_URL}/images/women3.png`, category: 'womens-watches' },
         ];
         // Simulate network delay

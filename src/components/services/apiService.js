@@ -8,7 +8,7 @@ const getImagePath = (path) => `${process.env.PUBLIC_URL}${path}`;
 const mockProducts = [
   // Women's Watches
   { id: 'ww1', name: "Elegant Gold Watch", price: 220, image: getImagePath('/images/women1.png'), isNew: true, category: 'womens-watches', style: 'dress', color: 'gold' },
-  { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 220, image: getImagePath('/images/women2.png'), isNew: true, category: 'womens-watches', style: 'luxury', color: 'gold' },
+  { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 220, image: getImagePath('/images/women2.jpeg'), isNew: true, category: 'womens-watches', style: 'luxury', color: 'gold' },
   { id: 'ww3', name: "Pink Dial Lady Watch", price: 220, image: getImagePath('/images/women3.png'), category: 'womens-watches', style: 'luxury', color: 'silver' },
 ];
 
