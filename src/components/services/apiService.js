@@ -6,46 +6,10 @@ const getImagePath = (path) => `${process.env.PUBLIC_URL}${path}`;
 
 // --- MOCK DATA ---
 const mockProducts = [
-  // Men's Watches
-  { id: 'mw1', name: 'Luxury Chronograph Watch', price: 299, image: getImagePath('/images/men1.jpeg'), isNew: true, category: 'mens-watches', style: 'luxury', color: 'black' },
-  { id: 'mw2', name: 'Classic Men\'s Watch', price: 249, image: getImagePath('/images/men2.jpeg'), isNew: true, category: 'mens-watches', style: 'dress', color: 'silver' },
-  { id: 'mw3', name: 'Sport Chronograph', price: 279, image: getImagePath('/images/men3.jpeg'), category: 'mens-watches', style: 'sport', color: 'black' },
-  { id: 'mw4', name: 'Elegant Timepiece', price: 259, image: getImagePath('/images/men4.jpeg'), category: 'mens-watches', style: 'luxury', color: 'silver' },
-  { id: 'mw5', name: 'Business Watch', price: 229, image: getImagePath('/images/men5.jpeg'), category: 'mens-watches', style: 'dress', color: 'black' },
-  { id: 'mw6', name: 'Modern Sport Watch', price: 289, image: getImagePath('/images/men6.jpeg'), category: 'mens-watches', style: 'sport', color: 'black' },
-  { id: 'mw7', name: 'Executive Timepiece', price: 319, image: getImagePath('/images/men7.jpeg'), category: 'mens-watches', style: 'luxury', color: 'silver' },
-  { id: 'mw8', name: 'Premium Chronograph', price: 349, image: getImagePath('/images/men8.jpeg'), category: 'mens-watches', style: 'luxury', color: 'black' },
-  { id: 'mw9', name: 'Designer Men\'s Watch', price: 269, image: getImagePath('/images/men9.jpeg'), category: 'mens-watches', style: 'dress', color: 'silver' },
-  { id: 'mw10', name: 'Ultimate Sport Watch', price: 299, image: getImagePath('/images/men10.jpeg'), category: 'mens-watches', style: 'sport', color: 'black' },
-  
   // Women's Watches
-  { id: 'ww1', name: "Elegant Gold Watch", price: 269, image: getImagePath('/images/women1.png'), isNew: true, category: 'womens-watches', style: 'dress', color: 'gold' },
-  { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 329, image: getImagePath('/images/women2.png'), isNew: true, category: 'womens-watches', style: 'luxury', color: 'gold' },
-  { id: 'ww3', name: "Pink Dial Lady Watch", price: 399, image: getImagePath('/images/women3.png'), category: 'womens-watches', style: 'luxury', color: 'silver' },
-  { id: 'ww4', name: "Designer Gold Watch", price: 289, image: getImagePath('/images/women4.png'), category: 'womens-watches', style: 'luxury', color: 'gold' },
-  { id: 'ww5', name: "Classic Women's Watch", price: 259, image: getImagePath('/images/women5.png'), category: 'womens-watches', style: 'dress', color: 'gold' },
-  { id: 'ww6', name: "Premium Timepiece", price: 279, image: getImagePath('/images/women6.png'), category: 'womens-watches', style: 'luxury', color: 'gold' },
-  
-  // Wallets
-  { id: 'wl1', name: 'Premium Leather Wallet', price: 149, image: getImagePath('/images/wal1.png'), category: 'wallets', style: 'classic', color: 'brown' },
-  { id: 'wl2', name: 'Elegant Leather Wallet', price: 129, image: getImagePath('/images/wal2.png'), category: 'wallets', style: 'classic', color: 'brown' },
-  { id: 'wl3', name: 'Modern Wallet', price: 169, image: getImagePath('/images/wal3.png'), category: 'wallets', style: 'modern', color: 'black' },
-  { id: 'wl4', name: 'Classic Bifold Wallet', price: 139, image: getImagePath('/images/wal4.png'), category: 'wallets', style: 'classic', color: 'brown' },
-  { id: 'wl5', name: 'Designer Wallet', price: 179, image: getImagePath('/images/wal5.png'), category: 'wallets', style: 'luxury', color: 'black' },
-  
-  // Men's Glasses
-  { id: 'gm1', name: 'Designer Sunglasses', price: 199, originalPrice: 249, discount: 20, image: getImagePath('/images/gmen1.jpeg'), category: 'mens-glasses', style: 'modern', color: 'black' },
-  { id: 'gm2', name: 'Modern Aviator Glasses', price: 179, image: getImagePath('/images/gmen2.jpeg'), category: 'mens-glasses', style: 'modern', color: 'silver' },
-  { id: 'gm3', name: 'Classic Frames', price: 159, image: getImagePath('/images/gmen3.jpeg'), category: 'mens-glasses', style: 'classic', color: 'gold' },
-  { id: 'gm4', name: 'Sport Sunglasses', price: 189, image: getImagePath('/images/gmen4.jpeg'), category: 'mens-glasses', style: 'sport', color: 'black' },
-  { id: 'gm5', name: 'Premium Eyewear', price: 219, image: getImagePath('/images/gmen5.jpeg'), category: 'mens-glasses', style: 'luxury', color: 'black' },
-  
-  // Women's Glasses
-  { id: 'gw1', name: 'Elegant Sunglasses', price: 189, image: getImagePath('/images/w1.jpeg'), category: 'womens-glasses', style: 'modern', color: 'black' },
-  { id: 'gw2', name: 'Chic Eyewear', price: 199, image: getImagePath('/images/w2.jpeg'), category: 'womens-glasses', style: 'luxury', color: 'gold' },
-  { id: 'gw4', name: 'Stylish Sunglasses', price: 189, image: getImagePath('/images/w4.png'), category: 'womens-glasses', style: 'modern', color: 'black' },
-  { id: 'gw5', name: 'Luxury Frames', price: 209, image: getImagePath('/images/w5.png'), category: 'womens-glasses', style: 'luxury', color: 'rose-gold' },
-  { id: 'gw6', name: 'Designer Eyewear', price: 199, image: getImagePath('/images/w6.png'), category: 'womens-glasses', style: 'modern', color: 'tortoise' },
+  { id: 'ww1', name: "Elegant Gold Watch", price: 220, image: getImagePath('/images/women1.png'), isNew: true, category: 'womens-watches', style: 'dress', color: 'gold' },
+  { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 220, image: getImagePath('/images/women2.png'), isNew: true, category: 'womens-watches', style: 'luxury', color: 'gold' },
+  { id: 'ww3', name: "Pink Dial Lady Watch", price: 220, image: getImagePath('/images/women3.png'), category: 'womens-watches', style: 'luxury', color: 'silver' },
 ];
 
 // --- API FUNCTIONS ---

@@ -13,12 +13,9 @@ const Home = () => {
         setLoading(true);
         // In a real app, this would be an actual API call
         const mockProducts = [
-          { id: 'fw1', name: 'Luxury Chronograph Watch', price: 299, image: `${process.env.PUBLIC_URL}/images/men1.jpeg`, isNew: true, category: 'mens-watches' },
-          { id: 'fw2', name: "Women's Elegant Watch", price: 269, image: `${process.env.PUBLIC_URL}/images/women1.png`, isNew: true, category: 'womens-watches' },
-          { id: 'fw3', name: 'Premium Leather Wallet', price: 149, image: `${process.env.PUBLIC_URL}/images/wal1.png`, category: 'wallets' },
-          { id: 'fw4', name: 'Designer Sunglasses', price: 199, originalPrice: 249, discount: 20, image: `${process.env.PUBLIC_URL}/images/gmen1.jpeg`, category: 'glasses' },
-          { id: 'fw5', name: 'Classic Men\'s Watch', price: 249, image: `${process.env.PUBLIC_URL}/images/men2.jpeg`, category: 'mens-watches' },
-          { id: 'fw6', name: 'Sport Chronograph', price: 279, image: `${process.env.PUBLIC_URL}/images/men3.jpeg`, category: 'mens-watches' },
+          { id: 'ww1', name: "Elegant Gold Watch", price: 220, image: `${process.env.PUBLIC_URL}/images/women1.png`, isNew: true, category: 'womens-watches' },
+          { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 220, image: `${process.env.PUBLIC_URL}/images/women2.png`, isNew: true, category: 'womens-watches' },
+          { id: 'ww3', name: "Pink Dial Lady Watch", price: 220, image: `${process.env.PUBLIC_URL}/images/women3.png`, category: 'womens-watches' },
         ];
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 800));
