@@ -59,7 +59,7 @@ const Home = () => {
           <h2>Shop by Category</h2>
           <div className="category-grid">
             <Link to="/category/mens-watches" className="category-card">
-              <img src={`${process.env.PUBLIC_URL}/images/men1.jpeg`} alt="Men's Watches" className="category-image" />
+              <img src={`${process.env.PUBLIC_URL}/images/men1.png`} alt="Men's Watches" className="category-image" />
               <h3>Men's Watches</h3>
             </Link>
             <Link to="/category/womens-watches" className="category-card">
