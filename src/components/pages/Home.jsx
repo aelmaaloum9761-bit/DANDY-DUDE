@@ -13,15 +13,12 @@ const Home = () => {
         setLoading(true);
         // In a real app, this would be an actual API call
         const mockProducts = [
+          { id: 'ww1', name: "Elegant Gold Watch", price: 220, image: `${process.env.PUBLIC_URL}/images/women1.png`, isNew: true, category: 'womens-watches' },
+          { id: 'ww2', name: "Luxury Rose Gold Timepiece", price: 220, image: `${process.env.PUBLIC_URL}/images/women2.jpeg`, isNew: true, category: 'womens-watches' },
+          { id: 'mw1', name: "Classic Men's Watch", price: 199, image: `${process.env.PUBLIC_URL}/images/men1.png`, isNew: true, category: 'mens-watches' },
+          { id: 'mw2', name: "Sport Chronograph", price: 199, image: `${process.env.PUBLIC_URL}/images/men2.jpeg`, isNew: true, category: 'mens-watches' },
           { id: 'wl1', name: "Premium Leather Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal1.jpeg`, isNew: true, category: 'wallets' },
           { id: 'wl2', name: "Elegant Leather Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal2.jpeg`, isNew: true, category: 'wallets' },
-          { id: 'wl3', name: "Modern Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal3.png`, category: 'wallets' },
-          { id: 'wl4', name: "Classic Bifold Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal4.png`, category: 'wallets' },
-          { id: 'wl5', name: "Designer Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal5.png`, category: 'wallets' },
-          { id: 'wl6', name: "Executive Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal6.png`, category: 'wallets' },
-          { id: 'wl7', name: "Business Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal7.png`, category: 'wallets' },
-          { id: 'wl8', name: "Premium Bifold Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal8.png`, category: 'wallets' },
-          { id: 'wl9', name: "Signature Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal9.png`, category: 'wallets' },
         ];
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 800));
