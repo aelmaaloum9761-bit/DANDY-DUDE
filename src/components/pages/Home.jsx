@@ -13,8 +13,8 @@ const Home = () => {
         setLoading(true);
         // In a real app, this would be an actual API call
         const mockProducts = [
-          { id: 'wl1', name: "Premium Leather Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal1.png`, isNew: true, category: 'wallets' },
-          { id: 'wl2', name: "Elegant Leather Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal2.png`, isNew: true, category: 'wallets' },
+          { id: 'wl1', name: "Premium Leather Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal1.jpeg`, isNew: true, category: 'wallets' },
+          { id: 'wl2', name: "Elegant Leather Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal2.jpeg`, isNew: true, category: 'wallets' },
           { id: 'wl3', name: "Modern Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal3.png`, category: 'wallets' },
           { id: 'wl4', name: "Classic Bifold Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal4.png`, category: 'wallets' },
           { id: 'wl5', name: "Designer Wallet", price: 170, image: `${process.env.PUBLIC_URL}/images/wal5.png`, category: 'wallets' },

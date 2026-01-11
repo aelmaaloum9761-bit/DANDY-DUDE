@@ -7,8 +7,8 @@ const getImagePath = (path) => `${process.env.PUBLIC_URL}${path}`;
 // --- MOCK DATA ---
 const mockProducts = [
   // Wallets
-  { id: 'wl1', name: "Premium Leather Wallet", price: 170, image: getImagePath('/images/wal1.png'), isNew: true, category: 'wallets', style: 'classic', color: 'brown' },
-  { id: 'wl2', name: "Elegant Leather Wallet", price: 170, image: getImagePath('/images/wal2.png'), isNew: true, category: 'wallets', style: 'classic', color: 'brown' },
+  { id: 'wl1', name: "Premium Leather Wallet", price: 170, image: getImagePath('/images/wal1.jpeg'), isNew: true, category: 'wallets', style: 'classic', color: 'brown' },
+  { id: 'wl2', name: "Elegant Leather Wallet", price: 170, image: getImagePath('/images/wal2.jpeg'), isNew: true, category: 'wallets', style: 'classic', color: 'brown' },
   { id: 'wl3', name: "Modern Wallet", price: 170, image: getImagePath('/images/wal3.png'), category: 'wallets', style: 'modern', color: 'black' },
   { id: 'wl4', name: "Classic Bifold Wallet", price: 170, image: getImagePath('/images/wal4.png'), category: 'wallets', style: 'classic', color: 'brown' },
   { id: 'wl5', name: "Designer Wallet", price: 170, image: getImagePath('/images/wal5.png'), category: 'wallets', style: 'luxury', color: 'black' },
