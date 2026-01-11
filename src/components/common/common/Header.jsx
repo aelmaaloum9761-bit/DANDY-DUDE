@@ -46,8 +46,6 @@ const Header = () => {
               <li><Link to="/category/mens-watches">Men's Watches</Link></li>
               <li><Link to="/category/womens-watches">Women's Watches</Link></li>
               <li><Link to="/category/wallets">Wallets</Link></li>
-              <li><Link to="/category/mens-glasses">Men's Glasses</Link></li>
-              <li><Link to="/category/womens-glasses">Women's Glasses</Link></li>
             </ul>
           </nav>
 
@@ -98,8 +96,6 @@ const Header = () => {
             <li><Link to="/category/mens-watches" onClick={toggleMobileMenu}>Men's Watches</Link></li>
             <li><Link to="/category/womens-watches" onClick={toggleMobileMenu}>Women's Watches</Link></li>
             <li><Link to="/category/wallets" onClick={toggleMobileMenu}>Wallets</Link></li>
-            <li><Link to="/category/mens-glasses" onClick={toggleMobileMenu}>Men's Glasses</Link></li>
-            <li><Link to="/category/womens-glasses" onClick={toggleMobileMenu}>Women's Glasses</Link></li>
             <li><Link to="/account" onClick={toggleMobileMenu}>My Account</Link></li>
             <li><Link to="/contact" onClick={toggleMobileMenu}>Contact</Link></li>
           </ul>

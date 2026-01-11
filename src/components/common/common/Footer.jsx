@@ -32,7 +32,6 @@ const Footer = () => {
               <li><Link to="/category/mens-watches">Men's Watches</Link></li>
               <li><Link to="/category/womens-watches">Women's Watches</Link></li>
               <li><Link to="/category/wallets">Wallets</Link></li>
-              <li><Link to="/category/glasses">Glasses</Link></li>
             </ul>
           </div>
 
