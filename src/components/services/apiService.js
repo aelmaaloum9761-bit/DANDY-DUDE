@@ -6,11 +6,16 @@ const getImagePath = (path) => `${process.env.PUBLIC_URL}${path}`;
 
 // --- MOCK DATA ---
 const mockProducts = [
-  // Men's Watches
-  { id: 'mw1', name: "Classic Men's Watch", price: 199, image: getImagePath('/images/men1.png'), isNew: true, category: 'mens-watches', style: 'luxury', color: 'black' },
-  { id: 'mw2', name: "Sport Chronograph", price: 199, image: getImagePath('/images/men2.jpeg'), isNew: true, category: 'mens-watches', style: 'sport', color: 'silver' },
-  { id: 'mw3', name: "Elegant Timepiece", price: 199, image: getImagePath('/images/men3.jpeg'), category: 'mens-watches', style: 'luxury', color: 'black' },
-  { id: 'mw4', name: "Business Watch", price: 199, image: getImagePath('/images/men4.png'), category: 'mens-watches', style: 'dress', color: 'silver' },
+  // Wallets
+  { id: 'wl1', name: "Premium Leather Wallet", price: 170, image: getImagePath('/images/wal1.png'), isNew: true, category: 'wallets', style: 'classic', color: 'brown' },
+  { id: 'wl2', name: "Elegant Leather Wallet", price: 170, image: getImagePath('/images/wal2.png'), isNew: true, category: 'wallets', style: 'classic', color: 'brown' },
+  { id: 'wl3', name: "Modern Wallet", price: 170, image: getImagePath('/images/wal3.png'), category: 'wallets', style: 'modern', color: 'black' },
+  { id: 'wl4', name: "Classic Bifold Wallet", price: 170, image: getImagePath('/images/wal4.png'), category: 'wallets', style: 'classic', color: 'brown' },
+  { id: 'wl5', name: "Designer Wallet", price: 170, image: getImagePath('/images/wal5.png'), category: 'wallets', style: 'luxury', color: 'black' },
+  { id: 'wl6', name: "Executive Wallet", price: 170, image: getImagePath('/images/wal6.png'), category: 'wallets', style: 'luxury', color: 'brown' },
+  { id: 'wl7', name: "Business Wallet", price: 170, image: getImagePath('/images/wal7.png'), category: 'wallets', style: 'modern', color: 'black' },
+  { id: 'wl8', name: "Premium Bifold Wallet", price: 170, image: getImagePath('/images/wal8.png'), category: 'wallets', style: 'luxury', color: 'brown' },
+  { id: 'wl9', name: "Signature Wallet", price: 170, image: getImagePath('/images/wal9.png'), category: 'wallets', style: 'luxury', color: 'black' },
 ];
 
 // --- API FUNCTIONS ---
