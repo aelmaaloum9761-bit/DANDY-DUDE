@@ -13,10 +13,10 @@ const Home = () => {
         setLoading(true);
         // In a real app, this would be an actual API call
         const mockProducts = [
-          { id: 'mw1', name: "Classic Men's Watch", price: 199, image: `${process.env.PUBLIC_URL}/images/men1.jpeg`, isNew: true, category: 'mens-watches' },
+          { id: 'mw1', name: "Classic Men's Watch", price: 199, image: `${process.env.PUBLIC_URL}/images/men1.png`, isNew: true, category: 'mens-watches' },
           { id: 'mw2', name: "Sport Chronograph", price: 199, image: `${process.env.PUBLIC_URL}/images/men2.jpeg`, isNew: true, category: 'mens-watches' },
           { id: 'mw3', name: "Elegant Timepiece", price: 199, image: `${process.env.PUBLIC_URL}/images/men3.jpeg`, category: 'mens-watches' },
-          { id: 'mw4', name: "Business Watch", price: 199, image: `${process.env.PUBLIC_URL}/images/men4.jpeg`, category: 'mens-watches' },
+          { id: 'mw4', name: "Business Watch", price: 199, image: `${process.env.PUBLIC_URL}/images/men4.png`, category: 'mens-watches' },
         ];
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 800));

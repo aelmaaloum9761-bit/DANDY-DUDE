@@ -7,10 +7,10 @@ const getImagePath = (path) => `${process.env.PUBLIC_URL}${path}`;
 // --- MOCK DATA ---
 const mockProducts = [
   // Men's Watches
-  { id: 'mw1', name: "Classic Men's Watch", price: 199, image: getImagePath('/images/men1.jpeg'), isNew: true, category: 'mens-watches', style: 'luxury', color: 'black' },
+  { id: 'mw1', name: "Classic Men's Watch", price: 199, image: getImagePath('/images/men1.png'), isNew: true, category: 'mens-watches', style: 'luxury', color: 'black' },
   { id: 'mw2', name: "Sport Chronograph", price: 199, image: getImagePath('/images/men2.jpeg'), isNew: true, category: 'mens-watches', style: 'sport', color: 'silver' },
   { id: 'mw3', name: "Elegant Timepiece", price: 199, image: getImagePath('/images/men3.jpeg'), category: 'mens-watches', style: 'luxury', color: 'black' },
-  { id: 'mw4', name: "Business Watch", price: 199, image: getImagePath('/images/men4.jpeg'), category: 'mens-watches', style: 'dress', color: 'silver' },
+  { id: 'mw4', name: "Business Watch", price: 199, image: getImagePath('/images/men4.png'), category: 'mens-watches', style: 'dress', color: 'silver' },
 ];
 
 // --- API FUNCTIONS ---
