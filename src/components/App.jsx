@@ -16,6 +16,7 @@ import ProductPage from './pages/ProductPage';
 import InquiryPage from './pages/InquiryPage';
 import AdminPage from './pages/AdminPage';
 import ContactPage from './pages/ContactPage';
+import ComingSoonPage from './pages/ComingSoonPage';
 import LoginPage from './common/account/Login';
 import RegisterPage from './common/account/Register';
 import AccountPage from './pages/AccountPage';
@@ -49,6 +50,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
                 <Route path="/product/:productId" element={<ProductPage />} />
+                <Route path="/glasses" element={<ComingSoonPage />} />
                 
                 {/* --- Inquiry Route (replaces Cart/Checkout) --- */}
                 <Route path="/inquiry" element={<InquiryPage />} />

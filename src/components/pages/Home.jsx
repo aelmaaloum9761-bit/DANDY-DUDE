@@ -75,10 +75,10 @@ const Home = () => {
               <img src={`${process.env.PUBLIC_URL}/images/wal1.jpeg`} alt="Wallets" className="category-image" />
               <h3>Wallets</h3>
             </Link>
-            <div className="category-card" style={{opacity: 0.7, cursor: 'not-allowed'}}>
-              <img src={`${process.env.PUBLIC_URL}/images/gmen1.jpeg`} alt="Glasses" className="category-image" />
+            <Link to="/glasses" className="category-card" style={{opacity: 0.9}}>
+              <img src={`${process.env.PUBLIC_URL}/images/gls1.jpeg`} alt="Glasses" className="category-image" />
               <h3>Glasses - Coming Soon</h3>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
