@@ -72,7 +72,7 @@ const Home = () => {
               <h3>Women's Watches</h3>
             </Link>
             <Link to="/category/wallets" className="category-card">
-              <img src={`${process.env.PUBLIC_URL}/images/wal1.png`} alt="Wallets" className="category-image" />
+              <img src={`${process.env.PUBLIC_URL}/images/wal1.jpeg`} alt="Wallets" className="category-image" />
               <h3>Wallets</h3>
             </Link>
             <Link to="/category/glasses" className="category-card">
