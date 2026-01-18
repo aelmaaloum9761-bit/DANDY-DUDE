@@ -1,15 +1,3 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "rewrites": [
-    {
-      "source": "/api/inquiries/:id",
-      "destination": "/api/inquiries?id=:id"
-    },
-    {
-      "source": "/api/inquiries",
-      "destination": "/api/inquiries"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
